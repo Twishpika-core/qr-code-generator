@@ -22,6 +22,21 @@ A customizable QR Code Generator built using HTML, CSS and JavaScript.
 - Scan reliability warning for low-contrast colors
 - Responsive design for desktop and mobile
 
+## Screenshots
+
+### Main Application
+![Main Application](screenshots/main.png)
+
+### Wi-Fi QR Code
+![Wi-Fi QR Code](screenshots/wifi.png)
+
+### Customization Options
+![Customization Options](screenshots/customization.png)
+
+### Mobile View
+![Mobile View](screenshots/mobilerepresentation1.jpeg)
+
+
 ## Technologies Used
 
 - HTML5
