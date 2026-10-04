@@ -46,3 +46,9 @@ qr-code-generator/
 ├── index.html
 ├── style.css
 └── script.js
+```
+## Author
+
+Twishpika Sharma
+
+
