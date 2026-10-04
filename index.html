@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>QR Code Generator</h1>
+
+        <p class="description">Create your own QR code</p>
+        <p class="description">Generate customized QR codes easily</p>
+
+        <div class="customization">
+            <label for="qrType">QR Type:</label>
+
+            <select id="qrType">
+                <option value="text">Plain Text</option>
+                <option value="url">URL</option>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="wifi">Wi-Fi</option>
+            </select>
+        </div>
+
+        <input id="qrInput" type="text" placeholder="Enter text">
+
+        <div id="wifiFields">
+
+            <label for="wifiName">Wi-Fi Name:</label>
+            <input type="text" id="wifiName" placeholder="Enter network name">
+
+            <label for="wifiPassword">Wi-Fi Password:</label>
+            <input type="text" id="wifiPassword" placeholder="Enter password">
+
+            <label for="wifiSecurity">Security:</label>
+
+            <select id="wifiSecurity">
+                <option value="WPA">WPA/WPA2</option>
+                <option value="WEP">WEP</option>
+                <option value="nopass">No Password</option>
+            </select>
+
+        </div>
+
+        <div class="customization">
+
+            <label for="qrSize">QR Code Size:</label>
+
+            <select id="qrSize">
+                <option value="150">Small</option>
+                <option value="200" selected>Medium</option>
+                <option value="250">Large</option>
+            </select>
+
+            <label for="fgColor">QR Color:</label>
+            <input type="color" id="fgColor" value="#000000">
+
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" value="#ffffff">
+
+            <label for="errorCorrection">Error Correction:</label>
+
+            <select id="errorCorrection">
+                <option value="L">Low</option>
+                <option value="M" selected>Medium</option>
+                <option value="Q">Quartile</option>
+                <option value="H">High</option>
+            </select>
+
+            <label for="qrPreset">QR Preset:</label>
+
+            <select id="qrPreset">
+                <option value="default">Default</option>
+                <option value="dark">Dark</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+
+            <label for="qrMargin">QR Margin:</label>
+
+            <select id="qrMargin">
+                <option value="0">None</option>
+                <option value="10" selected>Small</option>
+                <option value="20">Medium</option>
+                <option value="30">Large</option>
+            </select>
+
+        </div>
+
+        <p id="message"></p>
+
+        <div class="buttons">
+            <button id="generateBtn">Generate QR</button>
+            <button id="downloadBtn">Download QR</button>
+        </div>
+
+        <div id="qrPreview" class="qr-preview">
+            <p>Your QR code will appear here</p>
+        </div>
+
+        <div class="recent-section">
+
+            <h2>Recent QR Codes</h2>
+
+            <div id="recentQRs"></div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
