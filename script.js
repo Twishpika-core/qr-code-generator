@@ -118,9 +118,15 @@ function getQRData() {
     }
 
     if (type === "wifi") {
-
-        qrData =
-            `WIFI:T:${security};S:${networkName};P:${password};;`;
+    function escapeWifi(text) {
+        return text.replace(/([\\;,:"])/g, "\\$1");
+    }
+    const safeNetworkName =
+        escapeWifi(networkName);
+    const safePassword =
+        escapeWifi(password);
+    qrData =
+        `WIFI:T:${security};S:${safeNetworkName};P:${safePassword};;`;
     }
     return {
         valid: true,
